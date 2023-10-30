@@ -22,15 +22,14 @@ const express = require('express');
 const nodeServer = express();
 const appServer = require('./app');
 const bodyParser = require('body-parser');
-const cors = require('cors');
-const db = require('./dbconfig'); // Import your database configuration
+const cors = require('cors'); // Import the cors middleware
 
-// Use the bodyParser middleware
+// Set up CORS configuration to allow requests from your frontend
+const allowedOrigins = ['https://frabjous-genie-8ba260.netlify.app']; // Add your frontend URL here
+
 nodeServer.use(bodyParser.json());
 nodeServer.use(bodyParser.urlencoded({ extended: true }));
 
-// CORS configuration to allow requests from your Render frontend
-const allowedOrigins = ['https://gold-rate-convertor.onrender.com'];
 nodeServer.use(
   cors({
     origin: function (origin, callback) {
@@ -43,10 +42,9 @@ nodeServer.use(
   })
 );
 
-// Use your appServer
 nodeServer.use('/', appServer);
 
-const port = process.env.PORT || 8000; // Use the PORT environment variable for production
+const port = process.env.PORT || 8000;
 nodeServer.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
