@@ -22,6 +22,7 @@ const express = require('express');
 const nodeServer = express();
 const appServer = require('./app');
 const bodyParser = require('body-parser');
+require('./dbconfig');
 const cors = require('cors'); // Import the cors middleware
 
 // Set up CORS configuration to allow requests from your frontend
