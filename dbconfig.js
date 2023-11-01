@@ -9,16 +9,16 @@
 
 const mongoose = require("mongoose");
 
-
-const connection = async()=>{
-  await mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log("Connection Error: ", err);
-  });
+  } catch (err) {
+    console.error("Connection Error: ", err);
+  }
 }
 
-module.exports =connection;
+module.exports = connectDB;
