@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb+srv://hari:hari@gold.jr3qfmk.mongodb.net/GOLD_RATE", {
+    await mongoose.connect("mongodb+srv://hari:hari@gold.jr3qfmk.mongodb.net/GOLD", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
