@@ -60,7 +60,7 @@ router.post("/signupuser", async (req, res) => {
     });
   } else {
     try {
-      const result = await UserModel.find({ email });
+      const result = await UserModel.find({ email }).maxTimeMS(20000);;
       if (result.length) {
         res.status(409).json({
           status: "Failed",
