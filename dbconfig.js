@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
+    await mongoose.connect("mongodb+srv://hari:hari@gold.jr3qfmk.mongodb.net/GOLD RATE", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
