@@ -17,7 +17,8 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.2.4",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.4",
     "nodemailer": "^6.9.3",
     "shortid": "^2.2.16",
     "uuid": "^9.0.0"
