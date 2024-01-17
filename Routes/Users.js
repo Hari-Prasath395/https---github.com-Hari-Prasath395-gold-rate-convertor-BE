@@ -203,7 +203,7 @@ router.get("/verify/:userId/:uniqueString", async (req, res) => {
           await userVerificationModel.deleteOne({ userId });
 
           // User successfully verified
-          const message = "Verified successfully";
+          const message = "Verification successfull";
           res.redirect(`/user/verified?message=${message}`);
         } else {
           const message =
