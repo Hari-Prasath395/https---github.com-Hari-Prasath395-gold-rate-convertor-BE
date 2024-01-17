@@ -13,7 +13,7 @@ nodeServer.use(cors());
 nodeServer.use('/',appServer);
 
 
-const port = 5000;
+const port = 8000;
 nodeServer.listen(port,()=>{
     console.log(`Server started on port ${port}`);
 })

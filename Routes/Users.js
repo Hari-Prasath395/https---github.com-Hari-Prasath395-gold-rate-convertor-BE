@@ -99,7 +99,7 @@ router.post("/signupuser", async (req, res) => {
 });
 
 const sendVerificationEmail = ({ _id, email }, res) => {
-  const currentUrl = "http://localhost:5000/";
+  const currentUrl = "http://localhost:8000/";
   const uniqueString = uuidv4() + _id;
 
   const mailOptions = {
