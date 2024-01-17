@@ -99,7 +99,7 @@ router.post("/signupuser", async (req, res) => {
 });
 
 const sendVerificationEmail = ({ _id, email }, res) => {
-  const currentUrl = "https://gold-rate-convertor.onrender.com/";
+  const currentUrl = "http://localhost:5000/";
   const uniqueString = uuidv4() + _id;
 
   const mailOptions = {
